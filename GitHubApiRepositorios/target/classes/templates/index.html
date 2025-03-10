@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos GitHub</title>
+    <!-- <link rel="stylesheet" th:href="@{/css/styles.css}"> -->
+</head>
+<body>
+    <section class="projetos">
+        <h2>Projetos API GitHub</h2>
+
+        <!-- Combobox para selecionar o usuário -->
+        <div class="selecionar-usuario">
+            <label for="usuario">Selecione um usuário:</label>
+            <select id="usuario" onchange="location = this.value;">
+                <option value="/index?usuario=ESRicci26" th:selected="${usuario == 'ESRicci26'}">ESRicci26</option>
+                <option value="/index?usuario=algaworks" th:selected="${usuario == 'algaworks'}">algaworks</option>
+                <option value="/index?usuario=JDev-Treinamento" th:selected="${usuario == 'JDev-Treinamento'}">JDev-Treinamento</option>
+            </select>
+        </div>
+
+        <!-- Lista de repositórios -->
+        <section class="lista" id="lista-repositorios">
+            <div th:each="repo : ${repositories}" class="repositorio">
+                <h3 th:text="${repo.name}">Nome do Repositório</h3>
+                <p th:text="${repo.description} ?: 'Sem descrição disponível'">Descrição do Repositório</p>
+                <a th:href="${repo.htmlUrl}" target="_blank" rel="noopener noreferrer">Ver projeto</a>
+            </div>
+            <p th:if="${repositories.isEmpty()}">Nenhum repositório encontrado.</p>
+        </section>
+    </section>
+</body>
+</html>
