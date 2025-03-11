@@ -1,0 +1,86 @@
+.projetos {
+    padding-block: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.projetos h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #005505;
+}
+
+.selecionar-usuario {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.selecionar-usuario label {
+    font-size: 1rem;
+    color: #cc0d00;
+}
+
+.selecionar-usuario select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.selecionar-usuario select:hover {
+    border-color: #0070f3;
+}
+
+.lista {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-block: 1rem;
+    padding: 0 1rem;
+}
+
+.repositorio {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.repositorio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.repositorio h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #0070f3;
+}
+
+.repositorio p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #bca900;
+}
+
+.repositorio a {
+    font-size: 1rem;
+    color: #ff1100;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.repositorio a:hover {
+    text-decoration: underline;
+}
